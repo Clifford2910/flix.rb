@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FlixRb</title>
+    <title>Super Flix</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
-
   <body>
-    <%= yield %>
+
+    <header>
+      <h1>Flix</h1>
+    </header>
+
+    <div class="content">
+      <%= yield %>
+    </div>
+
+    <footer>
+      <p>
+        Copyright &copy; <%= Time.now.year %>
+        <%= link_to 'The Pragmatic Studio','https://pragmaticstudio.com' %>
+      </p>
+    </footer>
+
   </body>
 </html>
