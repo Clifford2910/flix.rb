@@ -491,7 +491,7 @@ form:not([class="button_to"]) {
     label {
       color: $error-color;
     }
-    input, textarea, select {
+    input, textarea, select, {
       background: $error-background-color;
     }
   }
