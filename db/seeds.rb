@@ -174,3 +174,9 @@ Movie.create!([
     image_file_name: "wonder-woman.png"
   }
 ])
+
+movie = Movie.find_by(title: "Avengers: Endgame")
+
+movie.reviews.create!(name: "Alex Clifford", stars: 4, comment: "Great film!")
+movie.reviews.create!(name: "Michelle Schofield", stars: 3, comment: "Good film")
+movie.reviews.create!(name: "Michael Rigby", stars: 5, comment: "Best film I've ever seen!")
