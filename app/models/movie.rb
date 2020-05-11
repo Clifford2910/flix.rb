@@ -1,6 +1,7 @@
 class Movie < ApplicationRecord
   has_many :reviews, dependent: :destroy
   has_many :favourites, dependent: :destroy
+  has_many :fans, through: :favourites, source: :user
 
   RATINGS = ["G", "PG", "PG-13", "R", "NC-17"]
 
