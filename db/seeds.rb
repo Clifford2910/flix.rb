@@ -110,7 +110,7 @@ Movie.create!([
       he grows up to become his adoptive home's first and greatest
       super-hero.
     }.squish,
-    released_on: "1978-12-15",
+    released_on: "2100-12-15",
     rating: 'PG',
     total_gross: 300_451_603,
     director: 'Richard Donner',
@@ -175,11 +175,6 @@ Movie.create!([
   }
 ])
 
-movie = Movie.find_by(title: "Avengers: Endgame")
-
-movie.reviews.create!(name: "Alex Clifford", stars: 4, comment: "Great film!")
-movie.reviews.create!(name: "Michelle Schofield", stars: 3, comment: "Good film")
-movie.reviews.create!(name: "Michael Rigby", stars: 5, comment: "Best film I've ever seen!")
 
 Genre.create!(name: "Action")
 Genre.create!(name: "Comedy")
