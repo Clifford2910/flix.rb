@@ -14,8 +14,10 @@
         <%= review.comment %>
       </p>
       <section>
-        <%= link_to "Edit", edit_movie_review_path(@movie, review), class: "button" %>
-        <%= link_to "Delete", movie_review_path(@movie, review), class: "button", method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% if current_user?(review.user) %>
+          <%= link_to "Edit", edit_movie_review_path(@movie, review), class: "button" %>
+          <%= link_to "Delete", movie_review_path(@movie, review), class: "button", method: :delete, data: { confirm: 'Are you sure?' } %>
+        <% end %>
       </section>
     </li>
   <% end %>
